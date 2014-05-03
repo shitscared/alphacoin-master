@@ -46,7 +46,7 @@ Var StartMenuGroup
 
 # Installer attributes
 OutFile alphacoin-0.6.3-win32-setup.exe
-InstallDir $PROGRAMFILES\Litecoin
+InstallDir $PROGRAMFILES\Alphacoin
 CRCCheck on
 XPStyle on
 BrandingText " "
@@ -131,7 +131,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Alphacoin.lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Alphacoin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Litecoin.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Alphacoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
