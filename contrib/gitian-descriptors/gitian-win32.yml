@@ -62,7 +62,7 @@ script: |
   export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
   export FAKETIME=$REFERENCE_DATETIME
   export TZ=UTC
-  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$HOME/build alphacoind.exe USE_UPNP=- DEBUGFLAGS="-frandom-seed=alphacoin"
+  make -f makefile.linux-mingw $MAKEOPTS DEPSDIR=$HOME/build alphacoind.exe USE_UPNP=1 DEBUGFLAGS="-frandom-seed=alphacoin"
   i586-mingw32msvc-strip alphacoind.exe
   mkdir $OUTDIR/daemon
   cp alphacoind.exe $OUTDIR/daemon
